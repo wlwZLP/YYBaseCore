@@ -1,0 +1,6 @@
+framework module YYBaseCore {
+  umbrella header "YYBaseCore-umbrella.h"
+
+  export *
+  module * { export * }
+}
