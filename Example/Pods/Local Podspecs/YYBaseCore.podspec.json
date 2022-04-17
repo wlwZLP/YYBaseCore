@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "summary": "A short description of YYBaseCore.",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/zhulp/YYBaseCore",
+  "homepage": "https://github.com/wlwZLP/YYBaseCore",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,11 +12,13 @@
     "zhulp": "1060021533@qq.com"
   },
   "source": {
-    "git": "https://github.com/zhulp/YYBaseCore.git",
+    "git": "https://github.com/wlwZLP/YYBaseCore.git",
     "tag": "0.1.0"
   },
+  "swift_versions": "5.0",
   "platforms": {
-    "ios": "9.0"
+    "ios": "11.0"
   },
-  "source_files": "YYBaseCore/Classes/**/*"
+  "source_files": "YYBaseCore/Classes/**/*",
+  "swift_version": "5.0"
 }
