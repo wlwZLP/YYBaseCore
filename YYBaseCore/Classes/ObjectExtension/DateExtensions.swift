@@ -22,10 +22,10 @@ public extension Date {
         guard let date = dateFormatter.date(from: dataString) else { return nil }
         self = date
     }
-    
+
+    /// 获取日历
     private var calendar: Calendar {
         return Calendar(identifier: Calendar.current.identifier)
-        // Workaround to segfault on corelibs foundation https://bugs.swift.org/browse/SR-10147
     }
     
     /// 年

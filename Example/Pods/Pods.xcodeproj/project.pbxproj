@@ -112,7 +112,7 @@
 		4568279DE47DC3AB91598E1317503995 /* UIImage+Diff.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Diff.m"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.m"; sourceTree = "<group>"; };
 		46166F4FAE4969DD182EFA9EEEBAA44F /* Pods-YYBaseCore_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-YYBaseCore_Example.modulemap"; sourceTree = "<group>"; };
 		4849AFE4ED19579846E8E422DE4BF26E /* Pods-YYBaseCore_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YYBaseCore_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		488D14718E0219B097475AD887A6E53A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		488D14718E0219B097475AD887A6E53A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		4AB8D9309A228B593EE35B95EBB97756 /* DoubleExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DoubleExtensions.swift; sourceTree = "<group>"; };
 		4C6513B09838318BD763CFD5390D1DE0 /* FBSnapshotTestCase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSnapshotTestCase.release.xcconfig; sourceTree = "<group>"; };
 		57221B54D014471C3D3E1925EFC917C8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -139,7 +139,7 @@
 		9672956A794F5E5A99B87BD7AC201DC5 /* YYBaseCore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YYBaseCore.release.xcconfig; sourceTree = "<group>"; };
 		99A67367E018411D614EC8536A8A1C5B /* UIApplication+StrictKeyWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+StrictKeyWindow.h"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.h"; sourceTree = "<group>"; };
 		9D3E7D3B5051609CF35A0FB78D8F7D36 /* UIColorExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E811B955E1A574B1B3B74F70E30C8AF /* UITableViewExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
 		A0BDE41BFBD865158F9CC462D71EB533 /* DateExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		A9EE7F7A344E7D9886D674DC4AC91DF6 /* Pods-YYBaseCore_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-YYBaseCore_Example-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -167,9 +167,9 @@
 		E8DE6A78FEE30B755A0613B7E480AD28 /* Pods-YYBaseCore_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-YYBaseCore_Example-dummy.m"; sourceTree = "<group>"; };
 		E949DB166434F8F1E2942060F6FF4038 /* Pods-YYBaseCore_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-YYBaseCore_Tests"; path = Pods_YYBaseCore_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB080411483DBA40E30B1E82A9F7A43A /* CGFloatExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CGFloatExtensions.swift; sourceTree = "<group>"; };
-		EE3B5B337BD320EADAF79052CEEFED92 /* YYBaseCore.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = YYBaseCore.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		EE3B5B337BD320EADAF79052CEEFED92 /* YYBaseCore.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = YYBaseCore.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		F27BBAF46F3434C0B831112965CFBBF8 /* DataExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DataExtensions.swift; sourceTree = "<group>"; };
-		F9AF5DF219651AFB48BFBCF01214FC66 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		F9AF5DF219651AFB48BFBCF01214FC66 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FEE661E58CA6655B39AA49AA4C021C33 /* FBSnapshotTestCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCase.h; path = FBSnapshotTestCase/FBSnapshotTestCase.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -215,16 +215,16 @@
 		0434AE44B6642A18EEB362A9C7CAE7DF /* YYBaseCore */ = {
 			isa = PBXGroup;
 			children = (
-				05A404F0E9572B1BCFEBB2544D2BF88A /* FoundationGeneral */,
+				FD42C89344CCB77F7EA7C7086C107C4F /* UIExtension */,
+				05A404F0E9572B1BCFEBB2544D2BF88A /* ObjectExtension */,
 				C26A1B97E8FBF95320D85B4F998CBA71 /* Pod */,
 				D5D9A2F79982EC8BC98158BC1665AE2C /* Support Files */,
-				FD42C89344CCB77F7EA7C7086C107C4F /* UIGeneral */,
 			);
 			name = YYBaseCore;
 			path = ../..;
 			sourceTree = "<group>";
 		};
-		05A404F0E9572B1BCFEBB2544D2BF88A /* FoundationGeneral */ = {
+		05A404F0E9572B1BCFEBB2544D2BF88A /* ObjectExtension */ = {
 			isa = PBXGroup;
 			children = (
 				376A0F493E584111BD962849FD45E0C7 /* ArrayExtensions.swift */,
@@ -242,8 +242,8 @@
 				6F46B4CE3D082E1B27A6ECC06A2D96D9 /* NSAttributeStringExtensions.swift */,
 				37F6B3F94A1BA5156A8FC84AB5BA17F0 /* StringExtensions.swift */,
 			);
-			name = FoundationGeneral;
-			path = YYBaseCore/Classes/FoundationGeneral;
+			name = ObjectExtension;
+			path = YYBaseCore/Classes/ObjectExtension;
 			sourceTree = "<group>";
 		};
 		09028BD0A3545354BCE4C32C951B4E1C /* Development Pods */ = {
@@ -350,7 +350,6 @@
 				B69B2ECE2D2C9A3924A9231138CE0BBC /* Support Files */,
 				906402ECC4C6C5EB58DD365FD2C64E92 /* SwiftSupport */,
 			);
-			name = FBSnapshotTestCase;
 			path = FBSnapshotTestCase;
 			sourceTree = "<group>";
 		};
@@ -427,7 +426,7 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		FD42C89344CCB77F7EA7C7086C107C4F /* UIGeneral */ = {
+		FD42C89344CCB77F7EA7C7086C107C4F /* UIExtension */ = {
 			isa = PBXGroup;
 			children = (
 				2ABAED1D180B0D23FC496B03CE9C3D44 /* UIButtonExtensions.swift */,
@@ -441,8 +440,8 @@
 				00E2B7765C7A472A2DFEFE1BAA92615E /* UIViewExtensions.swift */,
 				E3254CABC311183C7932AAAE746E52D0 /* UIWindowExtensions.swift */,
 			);
-			name = UIGeneral;
-			path = YYBaseCore/Classes/UIGeneral;
+			name = UIExtension;
+			path = YYBaseCore/Classes/UIExtension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -934,8 +933,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};

@@ -67,7 +67,7 @@ public extension String {
     }
     
     /// 获取字符串汉字个数
-    var chineseWordCount: Int {
+    var chinaWordCount: Int {
         return characters.reduce(0, { $0 + (String($1).lengthOfBytes(using: .utf8) == 3 ? 2 : 0) })
     }
     
