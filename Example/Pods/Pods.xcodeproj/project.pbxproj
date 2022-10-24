@@ -216,7 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				FD42C89344CCB77F7EA7C7086C107C4F /* UIExtension */,
-				05A404F0E9572B1BCFEBB2544D2BF88A /* ObjectExtension */,
+				05A404F0E9572B1BCFEBB2544D2BF88A /* BaseExtension */,
 				C26A1B97E8FBF95320D85B4F998CBA71 /* Pod */,
 				D5D9A2F79982EC8BC98158BC1665AE2C /* Support Files */,
 			);
@@ -224,7 +224,7 @@
 			path = ../..;
 			sourceTree = "<group>";
 		};
-		05A404F0E9572B1BCFEBB2544D2BF88A /* ObjectExtension */ = {
+		05A404F0E9572B1BCFEBB2544D2BF88A /* BaseExtension */ = {
 			isa = PBXGroup;
 			children = (
 				376A0F493E584111BD962849FD45E0C7 /* ArrayExtensions.swift */,
@@ -242,8 +242,8 @@
 				6F46B4CE3D082E1B27A6ECC06A2D96D9 /* NSAttributeStringExtensions.swift */,
 				37F6B3F94A1BA5156A8FC84AB5BA17F0 /* StringExtensions.swift */,
 			);
-			name = ObjectExtension;
-			path = YYBaseCore/Classes/ObjectExtension;
+			name = BaseExtension;
+			path = YYBaseCore/Classes/BaseExtension;
 			sourceTree = "<group>";
 		};
 		09028BD0A3545354BCE4C32C951B4E1C /* Development Pods */ = {
