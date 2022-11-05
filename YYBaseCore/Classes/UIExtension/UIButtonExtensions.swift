@@ -1,16 +1,15 @@
 //
 //  UIButtonExtensions.swift
-//  BMCore
+//  Core
 //
 //  Created by Chris on 2022/3/9.
 //
 
-import Foundation
-
+import Foundation 
 
 public extension UIButton {
     
-    enum BMButtonImagePosition {
+    enum ButtonImagePosition {
         /// 图片在上，文字在下，整体居中
         case top
         /// 图片在左，文字在右，整体居中
@@ -25,7 +24,7 @@ public extension UIButton {
     /// - Parameters:
     ///   - position: 图片的位置 ( 上, 左, 下, 右 )
     ///   - spacing: 图片和文字之间的间距
-    func contentPosition(at position: BMButtonImagePosition, spacing: CGFloat) {
+    func contentPosition(at position: ButtonImagePosition, spacing: CGFloat) {
         guard let imageRect = self.imageView?.frame,
               let titleRect = self.titleLabel?.frame
         else {
@@ -51,5 +50,37 @@ public extension UIButton {
             self.imageEdgeInsets = UIEdgeInsets(top: 0, left: (titleRect.size.width + spacing / 2), bottom: 0, right: -(titleRect.size.width +  spacing / 2))
         }
     }
-   
+    
 }
+
+private var expandEdgeKey = "Core.UIButton.expandEdgeKey"
+
+extension UIButton {
+    
+    /// 设置按钮点击区域向外扩展的大小
+    /// - Parameter edge: 向外扩展的大小
+    public func expandSize(edge: UIEdgeInsets) {
+        objc_setAssociatedObject(self, &expandEdgeKey, edge, objc_AssociationPolicy.OBJC_ASSOCIATION_COPY)
+    }
+    
+    /// 根据向外扩展的大小，重新计算Button的点击区域
+    /// - Returns: 计算后的Button的点击区域
+    private func expandRect() -> CGRect {
+        let expandEdge = objc_getAssociatedObject(self, &expandEdgeKey)
+        if let expandEdge = expandEdge as? UIEdgeInsets {
+            return CGRect(x: bounds.origin.x - expandEdge.left, y: bounds.origin.y - expandEdge.top, width: bounds.size.width + expandEdge.left + expandEdge.right, height: bounds.size.height + expandEdge.top + expandEdge.bottom)
+        }else{
+            return bounds
+        }
+    }
+    
+    open override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
+        let buttonRect = expandRect()
+        if (buttonRect.equalTo(bounds)) {
+            return super.point(inside: point, with: event)
+        }else{
+            return buttonRect.contains(point)
+        }
+    }
+}
+

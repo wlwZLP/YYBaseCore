@@ -1,6 +1,6 @@
 //
 //  UIWindowExtensions.swift
-//  BMCore
+//  Core
 //
 //  Created by Chris on 2022/3/10.
 //

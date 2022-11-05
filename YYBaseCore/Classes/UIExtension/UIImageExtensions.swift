@@ -1,14 +1,14 @@
 //
 //  UIImageExtensions.swift
-//  BMCore
+//  Core
 //
 //  Created by Chris on 2022/3/10.
 //
 
 import Foundation
 
-// MARK: 纯色UIImage、自定义尺寸UIImage、UIImage自动回正
 
+// MARK: 纯色UIImage、自定义尺寸UIImage、UIImage自动回正
 public extension UIImage {
     
     /// 初始化一个纯色的Image
@@ -32,6 +32,27 @@ public extension UIImage {
         
         return image ?? UIImage()
     }
+
+    /// 获得圆图
+    /// - Returns: 返回一个新创建的image
+    func cicleImage() -> UIImage {
+        // 开启图形上下文 false代表透明
+        UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
+        // 获取上下文
+        let ctx = UIGraphicsGetCurrentContext()
+        // 添加一个圆
+        let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+
+        ctx?.addEllipse(in: rect)
+        // 裁剪
+        ctx?.clip()
+        // 将图片画上去
+        draw(in: rect)
+        // 获取图片
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image ?? UIImage()
+    }
     
     /// 通过view初始化一个image
     /// - Parameter view: 初始化image的指定视图
@@ -49,7 +70,7 @@ public extension UIImage {
     /// - Parameter size: 需要重新绘制的image的尺寸
     /// - Returns: 新尺寸的image
     func resize(with size: CGSize) -> UIImage {
-        UIGraphicsBeginImageContext(size)
+        UIGraphicsBeginImageContextWithOptions(size, false, UIScreen.main.scale)
         draw(in: CGRect(x: 0, y: 0, width: size.width, height: size.height))
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
@@ -140,47 +161,6 @@ public extension UIImage {
         }
         
         return UIImage(cgImage: newCGImage)
-    }
-    
-}
-
-// MARK: iconFont UIImage
-
-public extension UIImage {
-    
-    /// 通过指定的iconFont样式及配置，初始化一个Image
-    /// - Parameters:
-    ///   - meta: iconFont 样式
-    ///   - size: iconFont 大小
-    ///   - textColor: iconFont 文字颜色
-    ///   - backgroundColor: 背景色
-    ///   - borderColor: 边框颜色，当设置边框时，文字颜色无效
-    ///   - borderWidth: 边框宽度
-    /// - Returns: 绘制的Image
-    static func iconFont(with meta: BMIconFontMetadata, size: CGSize, textColor: UIColor = .white, backgroundColor: UIColor = .clear, borderColor: UIColor = .clear, borderWidth: CGFloat = 0) -> UIImage {
-        // 防止崩溃，宽高最小为1px
-        let safeSize = CGSize(width: max(size.width, 1), height: max(size.height, 1))
-
-        let paragraph = NSMutableParagraphStyle()
-        paragraph.alignment = .center
-
-        let fontSize = min(safeSize.width, safeSize.height)
-
-        let strokeWidth = borderWidth
-        let iconFont = UIFont.iconFont(fontSize)
-
-        let attributedString = NSAttributedString(string: meta.rawValue, attributes: [.font: iconFont, .foregroundColor: textColor, .backgroundColor: backgroundColor, .paragraphStyle: paragraph, .strokeWidth: strokeWidth, .strokeColor: borderColor])
-
-        UIGraphicsBeginImageContextWithOptions(safeSize, false, UIScreen.main.scale)
-        attributedString.draw(in: CGRect(x: 0, y: (safeSize.height - fontSize) / 2.0, width: safeSize.width, height: fontSize))
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        
-        guard let image = image else {
-            return UIImage()
-        }
-
-        return image.withRenderingMode(.alwaysOriginal)
     }
     
 }

@@ -1,6 +1,6 @@
 //
 //  DateExtensions.swift
-//  BMCore
+//  Core
 //
 //  Created by Chris on 2022/3/8.
 //
@@ -14,7 +14,6 @@ public extension Date {
     ///   - dataString: 日期字符串
     ///   - format: 日期格式，默认 "yyyy-MM-dd HH:mm:ss"
     init?(dataString: String, format: String = "yyyy-MM-dd HH:mm:ss") {
-        // https://github.com/justinmakaila/NSDate-ISO-8601/blob/master/NSDateISO8601.swift
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")
         dateFormatter.timeZone = TimeZone.current
@@ -22,10 +21,10 @@ public extension Date {
         guard let date = dateFormatter.date(from: dataString) else { return nil }
         self = date
     }
-
-    /// 获取日历
+    
     private var calendar: Calendar {
         return Calendar(identifier: Calendar.current.identifier)
+        // Workaround to segfault on corelibs foundation https://bugs.swift.org/browse/SR-10147
     }
     
     /// 年

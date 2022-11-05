@@ -18,13 +18,15 @@ TODO: Add long description of the pod here.
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'zhulp' => '1060021533@qq.com' }
   s.source           = { :git => 'https://github.com/wlwZLP/YYBaseCore.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.swift_version = '5.0'
-  s.ios.deployment_target = '11.0'
+  s.ios.deployment_target = '13.0'
 
   s.source_files = 'YYBaseCore/Classes/**/*'
-  
- 
- 
+  s.dependency 'CryptoSwift'
+  s.dependency 'SwiftyRSA'
+  s.dependency 'Alamofire'
+  s.dependency 'KeychainAccess'
+
+
 end

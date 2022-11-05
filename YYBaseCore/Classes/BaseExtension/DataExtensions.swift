@@ -1,6 +1,6 @@
 //
 //  DataExtensions.swift
-//  BMCore
+//  Core
 //
 //  Created by Chris on 2022/3/8.
 //
@@ -13,5 +13,5 @@ public extension Data {
     var utf8String: String? {
         return String(data: self, encoding: .utf8)
     }
-
+    
 }

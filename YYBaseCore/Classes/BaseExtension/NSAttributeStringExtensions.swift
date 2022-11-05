@@ -1,11 +1,12 @@
 //
 //  NSAttributeString.swift
-//  BMCore
+//  Core
 //
 //  Created by Chris on 2022/3/9.
 //
 
 import Foundation
+
 
 // MARK: - Properties
 public extension NSAttributedString {
@@ -16,7 +17,7 @@ public extension NSAttributedString {
     }
     
     /// 中间划线
-    var strikethrough: NSAttributedString {
+    var strikethroughed: NSAttributedString {
         return applying(attributes: [.strikethroughStyle: NSUnderlineStyle.single.rawValue, .baselineOffset : 0])
     }
 
@@ -31,6 +32,7 @@ public extension NSAttributedString {
 }
 
 // MARK: - 方法
+
 public extension NSAttributedString {
     
     /// 设置颜色并返回
@@ -102,6 +104,7 @@ public extension NSAttributedString {
 }
 
 // MARK: 文本高度计算
+
 public extension NSAttributedString {
     
     /// 计算属性文本的高

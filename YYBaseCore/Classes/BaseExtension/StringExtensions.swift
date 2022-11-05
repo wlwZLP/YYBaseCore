@@ -1,6 +1,6 @@
 //
 //  StringExtensions.swift
-//  BMCore
+//  Core
 //
 //  Created by Chris on 2022/3/9.
 //
@@ -67,7 +67,7 @@ public extension String {
     }
     
     /// 获取字符串汉字个数
-    var chinaWordCount: Int {
+    var chineseWordCount: Int {
         return characters.reduce(0, { $0 + (String($1).lengthOfBytes(using: .utf8) == 3 ? 2 : 0) })
     }
     
@@ -325,30 +325,6 @@ public extension String {
         let attributesStr = NSAttributedString(string: self, attributes: attributes)
         let rect = attributesStr.boundingRect(with: tempSize, options: .usesLineFragmentOrigin, context: nil)
         return rect.size
-    }
-    
-}
-
-// MARK: json转Dictionary、Array
-
-public extension String {
-    
-    func toDictionary() -> [String : Any]? {
-        
-        guard let data = data(using: String.Encoding.utf8),
-              let dictionary = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String : Any] else {
-            return nil
-        }
-        return dictionary
-    }
-    
-    func toArray() -> [Any]? {
-        
-        guard let data = data(using: String.Encoding.utf8),
-              let array = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [Any] else {
-            return nil
-        }
-        return array
     }
     
 }
