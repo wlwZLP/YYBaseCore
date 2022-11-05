@@ -1,10 +1,22 @@
 PODS:
+  - Alamofire (5.6.2)
+  - CryptoSwift (1.6.0)
   - FBSnapshotTestCase (2.1.4):
     - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - YYBaseCore (0.1.0)
+  - KeychainAccess (4.2.2)
+  - SwiftyJSON (5.0.1)
+  - SwiftyRSA (1.7.0):
+    - SwiftyRSA/ObjC (= 1.7.0)
+  - SwiftyRSA/ObjC (1.7.0)
+  - YYBaseCore (0.1.0):
+    - Alamofire
+    - CryptoSwift
+    - KeychainAccess
+    - SwiftyJSON
+    - SwiftyRSA
 
 DEPENDENCIES:
   - FBSnapshotTestCase (~> 2.1.4)
@@ -12,16 +24,26 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Alamofire
+    - CryptoSwift
     - FBSnapshotTestCase
+    - KeychainAccess
+    - SwiftyJSON
+    - SwiftyRSA
 
 EXTERNAL SOURCES:
   YYBaseCore:
     :path: "../"
 
 SPEC CHECKSUMS:
+  Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
+  CryptoSwift: 562f8eceb40e80796fffc668b0cad9313284cfa6
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  YYBaseCore: 3b2e1bcc7538cc8c1d1009d72da31aef1d437b23
+  KeychainAccess: c0c4f7f38f6fc7bbe58f5702e25f7bd2f65abf51
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
+  SwiftyRSA: 8c6dd1ea7db1b8dc4fb517a202f88bb1354bc2c6
+  YYBaseCore: 2e2a2b888d4826a58856c7032793bb491d8eb833
 
-PODFILE CHECKSUM: 7ff4c24e936aaec5a07d9f7b1f1811401eff225d
+PODFILE CHECKSUM: 1ef685266f3804958764f873b65bdb80ae510aa3
 
 COCOAPODS: 1.11.3

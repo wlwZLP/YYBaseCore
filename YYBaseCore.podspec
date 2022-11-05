@@ -27,6 +27,7 @@ TODO: Add long description of the pod here.
   s.dependency 'SwiftyRSA'
   s.dependency 'Alamofire'
   s.dependency 'KeychainAccess'
+  s.dependency 'SwiftyJSON'
 
 
 end

@@ -1,13 +1,13 @@
 use_frameworks!
 
-platform :ios, '11.0'
+platform :ios, '13.0'
+install! 'cocoapods', :warn_for_unused_master_specs_repo => false
 
 target 'YYBaseCore_Example' do
   pod 'YYBaseCore', :path => '../'
 
   target 'YYBaseCore_Tests' do
     inherit! :search_paths
-
     pod 'FBSnapshotTestCase' , '~> 2.1.4'
   end
 end
